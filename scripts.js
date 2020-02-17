@@ -1,15 +1,26 @@
-// ! 17 Feb 2020!
+//PASS by VALUE
+let x = 3;
 
-const a = 49; //True PRIMITIVES are compared by value.
-const b = 49;
+//let y = x;
 
-//Compare by reference.
-const x = {
+console.log(y);
+
+//PRIMITIVES CANNOT MUTATE.
+//'3' THT WAS USED WITH 'X'  previously is completely thrown out and replaced with 4.
+x = 4;
+let y = x;
+
+console.log(y);
+
+//PASS BY REFERENCE
+const a = {
   name: "Manav"
 };
 
-const y = {
-  name: "Manav"
-};
-// false b/c OBJECTS are COMPARED BY REFERENCE.
-console.log(x === y);
+//B will point to the same memory address as a.
+//What happens to 1 will affect the other.
+const b = a;
+
+a.name = "Dhanav";
+
+console.jog(b.name);
